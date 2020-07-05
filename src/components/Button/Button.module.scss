@@ -1,0 +1,22 @@
+.button {
+	width: 225px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Fahkwang', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.dark {
+	background: #000000;
+	color: #ffffff;
+}
+
+.light {
+	background: #ffffff;
+	color: #000000;
+}

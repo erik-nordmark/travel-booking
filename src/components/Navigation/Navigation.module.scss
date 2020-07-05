@@ -1,0 +1,49 @@
+header {
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	max-width: 100%;
+	z-index: 2;
+	background: #ffffff;
+
+	.navigationWrapper {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1rem;
+
+		h1 {
+			font-family: 'Fahkwang', sans-serif;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 23px;
+			/* identical to box height, or 128% */
+
+			letter-spacing: 1.63636px;
+
+			color: #222222;
+			margin-left: 1.5rem;
+		}
+
+		ul {
+			list-style-type: none;
+			display: inline-flex;
+
+			li {
+				margin-right: 3rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		nav {
+			position: absolute;
+			left: 0%;
+			right: -0.27%;
+			top: 0%;
+			bottom: 96.9%;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+div {
+	.empty {
+		background-image: url('/images/cart_empty.svg');
+		background-size: cover;
+		background-position: center center;
+		width: 19px;
+		height: 25px;
+	}
+
+	.full {
+		background-image: url('/images/cart_full.svg');
+		background-size: cover;
+		background-position: center center;
+		width: 19px;
+		height: 25px;
+	}
+}

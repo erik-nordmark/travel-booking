@@ -1,0 +1,30 @@
+.postWrapper {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+
+	.imageContainer {
+		width: 100%;
+		height: 418px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		display: flex;
+		justify-content: left;
+		align-items: flex-end;
+
+		h3 {
+			color: #ffffff;
+			padding: 1rem;
+		}
+	}
+
+	.content {
+		padding: 1rem;
+
+		p {
+			white-space: pre-wrap;
+		}
+	}
+}

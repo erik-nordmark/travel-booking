@@ -1,0 +1,17 @@
+.heroWrapper {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	width: 100vw;
+	max-width: 100%;
+	height: 550px;
+
+	.lockupWrapper {
+		height: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0 5.5rem;
+	}
+}
