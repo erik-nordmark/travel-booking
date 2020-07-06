@@ -1,6 +1,5 @@
 import React from 'react';
 import { RecommendationCard } from 'components/RecommendationCard/RecommendationCard';
-import 'swiper/swiper.scss';
 
 import styles from './RecommendationCarousel.module.scss';
 

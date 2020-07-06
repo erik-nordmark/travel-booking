@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ScrollLock from 'react-scrolllock';
 import { Cart } from 'components/Cart/Cart';
 import styles from './Navigation.module.scss';
 
