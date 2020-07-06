@@ -17,7 +17,6 @@ export const BookingPage = () => {
 
 	const memoizeGetFeatured = useCallback(async () => {
 		const item = await getFeaturedById(params.id);
-		console.log(item);
 		setFeatured(item);
 	}, [featured]);
 
@@ -33,14 +32,16 @@ export const BookingPage = () => {
 				</Link>
 			</Header>
 			{!isFeaturedLoading && !featuredError && featured && (
-				<div className='bookingWrapper'>
-					<Hero image={featured.media.large.url} />
-					<Booking
-						title={featured.title}
-						price={featured.price.value}
-						unit={featured.price.unit}
-					/>
-					<Text>{featured.body}</Text>
+				<div className='bookingPage'>
+					<div className='bookingWrapper'>
+						<Hero image={featured.media.large.url} />
+						<Booking
+							title={featured.title}
+							price={featured.price.value}
+							unit={featured.price.unit}
+						/>
+						<Text>{featured.body}</Text>
+					</div>
 				</div>
 			)}
 		</>

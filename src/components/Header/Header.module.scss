@@ -19,7 +19,6 @@ header {
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 23px;
-			/* identical to box height, or 128% */
 
 			letter-spacing: 1.63636px;
 
@@ -34,6 +33,18 @@ header {
 		.headerWrapper {
 			flex-direction: column;
 			align-items: flex-start;
+
+			h1 {
+				font-family: Fahkwang;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 18px;
+
+				letter-spacing: 1.27273px;
+
+				color: #000000;
+			}
 		}
 	}
 }

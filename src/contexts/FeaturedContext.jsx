@@ -26,7 +26,6 @@ export const FeaturedProvider = ({ children }) => {
 
 	const getFeaturedByIdCallback = (id) => {
 		setFeaturedLoading(true);
-		console.log('Fetching featured by id..', id);
 		if (!featured) {
 			const response = getFeaturedById(id);
 			if (response.error) {

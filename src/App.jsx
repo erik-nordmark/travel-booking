@@ -4,7 +4,7 @@ import { Routes } from 'routes/Routes';
 import { CartProvider } from 'contexts/CartContext';
 import { FeaturedProvider } from 'contexts/FeaturedContext';
 import { CarouselProvider } from 'contexts/CarouselContext';
-import './App.css';
+import './App.scss';
 
 function App() {
 	return (

@@ -65,7 +65,7 @@
 		min-height: 100vh;
 		background: #ffffff;
 		position: absolute;
-		top: 79px;
+		top: 65px;
 		left: 0;
 		right: 0;
 		bottom: 0;
@@ -108,4 +108,16 @@
 			}
 		}
 	}
+}
+
+.closeButton::before {
+	display: inline-block;
+	content: '\00d7';
+	font-size: 40px;
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	top: -20px;
+	right: 25px;
+	z-index: 200;
 }
