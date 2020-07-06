@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<button
+  className="button dark"
+  data-testid="button"
+  disabled={true}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  type="button"
+>
+  test
+</button>
+`;

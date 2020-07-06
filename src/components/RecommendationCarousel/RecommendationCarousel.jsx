@@ -1,9 +1,17 @@
 import React from 'react';
+import Swiper from 'react-id-swiper';
 import { RecommendationCard } from 'components/RecommendationCard/RecommendationCard';
+import 'swiper/swiper.scss';
 
 import styles from './RecommendationCarousel.module.scss';
 
 export const RecommendationCarousel = ({ items }) => {
+	const params = {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		loopFillGroupWithBlank: false,
+	};
+
 	return (
 		<section className={styles.recommendationCarouselWrapper}>
 			<div className={styles.recommendationCarouselHeader}>
@@ -11,7 +19,8 @@ export const RecommendationCarousel = ({ items }) => {
 				<p>Get out and expreience Scandinavian way of living</p>
 			</div>
 
-			<div className={styles.carousel}>
+			{/* <div className={styles.carousel}> */}
+			<Swiper params={params}>
 				{items &&
 					items.map((item) => (
 						<RecommendationCard
@@ -20,9 +29,11 @@ export const RecommendationCarousel = ({ items }) => {
 							price={item.price.value}
 							image={item.media.small.url}
 							unit={item.price.unit}
+							id={item.id}
 						/>
 					))}
-			</div>
+			</Swiper>
+			{/* </div> */}
 		</section>
 	);
 };

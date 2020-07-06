@@ -1,21 +1,21 @@
-import React, { useEffect, useCallback, useContext } from 'react';
+import React from 'react';
 import { Post } from 'components/Post/Post';
 import styles from './Main.module.scss';
-
-// import post1image from '/images/post1.png';
 
 export const Main = ({ featured }) => {
 	return (
 		<main>
 			<div className={styles.mainGrid}>
 				{featured &&
-					featured.map((feature) => (
+					featured.map((feature, index) => (
 						<Post
-							key={featured.id}
+							key={index.toString()}
 							title={feature.title}
 							text={feature.body}
 							price={feature.price.value}
+							unit={feature.price.unit}
 							image={feature.media.large.url}
+							id={feature.id}
 						/>
 					))}
 			</div>

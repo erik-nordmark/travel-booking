@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Lockup } from 'components/Lockup/Lockup';
+import { Header } from 'components/Header/Header';
 
 test('renders without crashing', () => {
 	const div = document.createElement('div');
-	ReactDOM.render(<Lockup />, div);
+	ReactDOM.render(<Header />, div);
 });

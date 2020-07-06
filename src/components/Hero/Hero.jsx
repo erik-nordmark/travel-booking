@@ -2,20 +2,13 @@ import React from 'react';
 import { Lockup } from 'components/Lockup/Lockup';
 import styles from './Hero.module.scss';
 
-export const Hero = ({ feature }) => {
-	console.log('Hero', feature);
+export const Hero = ({ children, image }) => {
 	return (
 		<section
 			className={styles.heroWrapper}
-			style={{ backgroundImage: `url(${feature.media.large.url}` }}
+			style={{ backgroundImage: `url(${image}` }}
 		>
-			<div className={styles.lockupWrapper}>
-				<Lockup
-					title={feature.title}
-					price={feature.price.value}
-					unit={feature.unit}
-				/>
-			</div>
+			<div className={styles.lockupWrapper}>{children}</div>
 		</section>
 	);
 };

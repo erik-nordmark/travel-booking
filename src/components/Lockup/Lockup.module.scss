@@ -2,6 +2,10 @@
 	height: 50%;
 	text-align: left;
 	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 160px;
 
 	h2 {
 		margin: 0;

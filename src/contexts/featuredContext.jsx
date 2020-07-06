@@ -1,5 +1,5 @@
 import React, { createContext, useState, useMemo } from 'react';
-import { getFeatured } from 'services/featuredService';
+import { getFeatured, getFeaturedById } from 'services/FeaturedService';
 
 export const FeaturedContext = createContext({});
 
@@ -24,8 +24,29 @@ export const FeaturedProvider = ({ children }) => {
 		[featured]
 	);
 
+	const getFeaturedByIdCallback = (id) => {
+		setFeaturedLoading(true);
+		console.log('Fetching featured by id..', id);
+		if (!featured) {
+			const response = getFeaturedById(id);
+			if (response.error) {
+				setFeaturedError(response.error);
+			}
+			setFeaturedLoading(false);
+			return response.data;
+		}
+
+		const item = featured.find((feature) => feature.id === id);
+		if (!item) {
+			setFeaturedError(Error('Id does not exists.'));
+		}
+		setFeaturedLoading(false);
+		return item;
+	};
+
 	const state = {
 		getFeatured: getFeaturedCallback,
+		getFeaturedById: getFeaturedByIdCallback,
 		featured,
 		featuredError,
 		isFeaturedLoading,

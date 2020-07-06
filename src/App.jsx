@@ -1,21 +1,24 @@
 import React from 'react';
-import { CartProvider } from 'contexts/cartContext';
-import { FeaturedProvider } from 'contexts/featuredContext';
-import { CarouselProvider } from 'contexts/carouselContext';
-import { LandingPage } from './pages/LandingPage';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes } from 'routes/Routes';
+import { CartProvider } from 'contexts/CartContext';
+import { FeaturedProvider } from 'contexts/FeaturedContext';
+import { CarouselProvider } from 'contexts/CarouselContext';
 import './App.css';
 
 function App() {
 	return (
-		<div className='App'>
-			<CartProvider>
-				<FeaturedProvider>
-					<CarouselProvider>
-						<LandingPage />
-					</CarouselProvider>
-				</FeaturedProvider>
-			</CartProvider>
-		</div>
+		<Router>
+			<div className='App'>
+				<CartProvider>
+					<FeaturedProvider>
+						<CarouselProvider>
+							<Routes />
+						</CarouselProvider>
+					</FeaturedProvider>
+				</CartProvider>
+			</div>
+		</Router>
 	);
 }
 

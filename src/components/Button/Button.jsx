@@ -6,24 +6,43 @@ const Colors = {
 	LIGHT: Symbol('light'),
 };
 
-const Button = ({ label, color, full }) => {
+const Button = ({ label, color, full, onClick, disabled }) => {
 	return (
-		<div
+		<button
+			type='button'
+			disabled={disabled}
 			data-testid='button'
+			onClick={onClick}
 			style={{ width: full ? '100%' : '' }}
 			className={`${styles.button} ${
 				color === Colors.DARK ? styles.dark : styles.light
 			}`}
 		>
 			{label}
-		</div>
+		</button>
 	);
 };
 
-export const DarkButton = ({ label, full }) => {
-	return <Button label={label} color={Colors.DARK} full={full} />;
+export const DarkButton = ({ label, full, onClick, disabled }) => {
+	return (
+		<Button
+			label={label}
+			color={Colors.DARK}
+			full={full}
+			onClick={onClick}
+			disabled={disabled}
+		/>
+	);
 };
 
-export const LightButton = ({ label, full }) => {
-	return <Button label={label} color={Colors.LIGHT} full={full} />;
+export const LightButton = ({ label, full, onClick, disabled }) => {
+	return (
+		<Button
+			label={label}
+			color={Colors.LIGHT}
+			full={full}
+			onClick={onClick}
+			disabled={disabled}
+		/>
+	);
 };

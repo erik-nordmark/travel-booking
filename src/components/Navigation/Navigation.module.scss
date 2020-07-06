@@ -1,49 +1,111 @@
-header {
-	position: sticky;
-	top: 0;
-	width: 100vw;
-	max-width: 100%;
-	z-index: 2;
-	background: #ffffff;
+.desktopMenu {
+	ul {
+		list-style-type: none;
+		display: inline-flex;
 
-	.navigationWrapper {
-		max-width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin: 1rem;
-
-		h1 {
-			font-family: 'Fahkwang', sans-serif;
+		li {
+			margin: 0 2rem;
+			font-family: Fahkwang;
 			font-style: normal;
 			font-weight: 600;
-			font-size: 18px;
-			line-height: 23px;
-			/* identical to box height, or 128% */
+			font-size: 14px;
+			line-height: 18px;
 
-			letter-spacing: 1.63636px;
+			letter-spacing: 1.27273px;
 
-			color: #222222;
-			margin-left: 1.5rem;
+			color: #000000;
 		}
+	}
+}
+
+.mobileMenu {
+	display: none;
+}
+
+.mobileNavigation {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+@media screen and (max-width: 800px) {
+	.desktopMenu {
+		display: none;
+	}
+	.mobileMenu {
+		display: flex;
+		position: absolute;
+		top: 30px;
+		right: 10px;
+
+		.menuIconWrapper {
+			width: 20px;
+			height: 20px;
+			margin: 0 2rem;
+			cursor: pointer;
+
+			span {
+				display: block;
+				width: 22;
+				height: 2px;
+				margin-bottom: 5px;
+				position: relative;
+
+				background: #000000;
+
+				z-index: 1;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.mobileNavigation {
+		width: 100vw;
+		min-height: 100vh;
+		background: #ffffff;
+		position: absolute;
+		top: 79px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
 		ul {
 			list-style-type: none;
 			display: inline-flex;
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0 2rem;
+			width: 85%;
 
 			li {
-				margin-right: 3rem;
-			}
-		}
-	}
+				border-bottom: 1px solid;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				height: 10%;
+				font-family: Fahkwang;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 18px;
 
-	@media screen and (max-width: 600px) {
-		nav {
-			position: absolute;
-			left: 0%;
-			right: -0.27%;
-			top: 0%;
-			bottom: 96.9%;
+				letter-spacing: 1.27273px;
+
+				color: #000000;
+			}
+
+			li:last-child {
+				border-bottom: 0;
+			}
 		}
 	}
 }

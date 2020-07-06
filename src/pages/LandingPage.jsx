@@ -1,10 +1,12 @@
 import React, { useEffect, useCallback, useContext } from 'react';
+import { Header } from 'components/Header/Header';
 import { Navigation } from 'components/Navigation/Navigation';
 import { Hero } from 'components/Hero/Hero';
 import { Main } from 'components/Main/Main';
 import { RecommendationCarousel } from 'components/RecommendationCarousel/RecommendationCarousel';
-import { FeaturedContext } from 'contexts/featuredContext';
-import { CarouselContext } from 'contexts/carouselContext';
+import { FeaturedContext } from 'contexts/FeaturedContext';
+import { CarouselContext } from 'contexts/CarouselContext';
+import { Lockup } from 'components/Lockup/Lockup';
 
 export const LandingPage = () => {
 	const {
@@ -39,8 +41,16 @@ export const LandingPage = () => {
 
 	const getHeroComponent = () => {
 		if (featured) {
-			console.log(featured[0]);
-			return <Hero feature={featured[0]} />;
+			return (
+				<Hero image={featured[0].media.large.url}>
+					<Lockup
+						title={featured[0].title}
+						price={featured[0].price.value}
+						unit={featured[0].unit}
+						id={featured[0].id}
+					/>
+				</Hero>
+			);
 		}
 	};
 
@@ -51,16 +61,16 @@ export const LandingPage = () => {
 	};
 
 	const getCarouselComponent = () => {
-		console.log(carousel);
 		if (carousel && carousel.items.length > 0) {
-			console.log('TESTS');
 			return <RecommendationCarousel items={carousel.items} />;
 		}
 	};
 
 	return (
 		<>
-			<Navigation />
+			<Header>
+				<Navigation />
+			</Header>
 			{!isFeaturedLoading && !featuredError && (
 				<>
 					{getHeroComponent()}

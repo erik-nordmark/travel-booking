@@ -1,5 +1,5 @@
 import React, { createContext, useState, useMemo } from 'react';
-import { getCarousel } from 'services/carouselService';
+import { getCarousel } from 'services/CarouselService';
 
 export const CarouselContext = createContext({});
 

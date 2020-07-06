@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@600&family=Muli:wght@400;700;900&display=swap');
 
+body {
+	overflow-x: hidden;
+}
+
+button {
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
 .App {
 	text-align: center;
 	width: 100vw;
@@ -8,6 +20,35 @@
 	display: grid;
 	flex-direction: column;
 	font-family: 'Muli', sans-serif;
+}
+
+.bookingWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 70vw auto;
+	gap: 1rem;
+	grid-template-rows: auto;
+	height: 100%;
+	flex: 1;
+	margin: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+	.bookingWrapper {
+		grid-template-columns: 100%;
+	}
+}
+
+.closeButton::before {
+	display: inline-block;
+	content: '\00d7';
+	font-size: 40px;
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	top: 1px;
+	right: 5px;
+	z-index: 101;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="bookingWrapper"
+>
+  <h3 />
+  <p>
+    from 5 per person
+  </p>
+  <p>
+    Adult
+  </p>
+  <div
+    className="shopWrapper"
+  >
+    <button
+      className="remove"
+      label="Remove adult"
+      onClick={[Function]}
+      type="button"
+    />
+    <input
+      onChange={[Function]}
+      value={0}
+    />
+    <button
+      className="add"
+      label="Add adult"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+  <p>
+    Children
+  </p>
+  <div
+    className="shopWrapper"
+  >
+    <button
+      className="remove"
+      label="Remove children"
+      onClick={[Function]}
+      type="button"
+    />
+    <input
+      onChange={[Function]}
+      value={0}
+    />
+    <button
+      className="add"
+      label="Add children"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+  <p
+    className="total"
+  >
+    Total: £0
+  </p>
+  <button
+    className="button dark"
+    data-testid="button"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "",
+      }
+    }
+    type="button"
+  >
+    Book experience
+  </button>
+</div>
+`;
